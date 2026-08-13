@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>九面玄策 · 卷壹 · 封印档案</title>
+<meta name="description" content="2019 年发现的未完成调查记录。请在日光下阅读。">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/page.css">
+</head>
+<body class="is-index">
+
+<div class="overlay-film"></div>
+<div class="overlay-vignette"></div>
+<div class="overlay-noise"></div>
+<div class="overlay-scanlines"></div>
+<div class="glitch-frame" id="glitchFrame"></div>
+<div class="jump-text" id="jumpText"></div>
+
+<!-- 眼睛 · 跟随鼠标 -->
+<img src="images/eye.jpg" class="eye-follow" id="eyeFollow" alt="">
+<!-- 眼睛 · 边缘窥视 -->
+<img src="images/eye.jpg" class="eye-peek left" id="" alt="">
+<img src="images/eye.jpg" class="eye-peek right" alt="">
+<img src="images/eye.jpg" class="eye-peek bottom" alt="">
+<!-- 眼睛 · 中央闪现 -->
+<img src="images/eye.jpg" class="eye-flash" id="eyeFlash" alt="">
+
+<!-- REC -->
+<div class="rec-bar" id="recBar">
+  <span class="rec-dot"></span>
+  <span class="rec-text">REC&nbsp;</span>
+  <span class="rec-timer" id="recTimer">00:00:00</span>
+  <span class="rec-meta">TAPE 01 · 九面档案 · 未经剪辑</span>
+</div>
+
+<!-- 片头 -->
+<div class="intro" id="intro">
+  <div class="intro-inner">
+    <p class="intro-kicker">以下影像由匿名调查员在<br>废弃寺观「显圣宫」内寻得</p>
+    <h1 class="intro-title">九 面 玄 策</h1>
+    <p class="intro-sub">T H E &nbsp; N I N E - F A C E D &nbsp; D O C T R I N E</p>
+    <p class="intro-desc">一段关于「大面尊主」的未完成调查记录<br>共 8 卷影像 · 部分内容已损坏 · 建议单人观看</p>
+    <button class="play-btn" id="playBtn">
+      <span class="play-tri">▶</span> 开 始 播 放 影 像
+    </button>
+    <p class="intro-warn">⚠ 画面含轻微频闪 · 含跟踪镜头 · 请自行斟酌观看</p>
+    <p class="intro-hint" id="introHint">（它已经知道你打开了这一卷）</p>
+  </div>
+</div>
+
+<!-- 主页 -->
+<main class="site hidden" id="site">
+  <header class="header">
+    <div class="header-left">
+      <span class="tape-id">TAPE-01 / SIDE-A</span>
+      <span class="header-title">九面玄策 · 封印调查档案 · 卷壹</span>
+    </div>
+    <nav class="nav">
+      <a href="index.html" class="current">总纲</a>
+      <a href="vol1.html">核心法则</a>
+      <a href="vol2.html">修炼手册</a>
+      <a href="vol3.html">失踪者</a>
+      <a href="vol4.html">千面卷</a>
+      <a href="vol5.html">访谈</a>
+      <a href="vol6.html">戒律</a>
+      <a href="vol7.html">尾页</a>
+    </nav>
+  </header>
+
+  <section class="cover eye-cover">
+    <div class="cover-mark">◇ 九面教 · 内部资料 ◇</div>
+    <h2 class="cover-title">九 面 玄 策</h2>
+    <p class="cover-en">THE SEALED SCRIPTURES OF NINE FACES</p>
+    <p class="cover-sub">调查编号 <span class="hl-red">JF-D-001</span><br>发现时间：2019.04.17 · 发现物：牛皮纸手稿 47 页 + 录像带 8 卷<br>发现地点：废弃寺观「显圣宫」地下夹层</p>
+    <p class="cover-warn">本档案涉及未经证实的宗教修行群体「九面教」。<br>本局不承认其中任何内容的真实性，亦不保证观看者的安全。</p>
+  </section>
+
+  <section class="sec" id="s1">
+    <div class="sec-head">
+      <span class="sec-no">[ 卷壹 ]</span>
+      <h3 class="sec-title">总纲 · 天地未开，其形为面</h3>
+      <span class="sec-time">播放时间 00:00:41</span>
+    </div>
+    <div class="parchment">
+      <p class="quote">「天地未开，其形为面。面者，位也，权也，宇宙在个体之上的投影边界。」</p>
+      <p>修行非以气贯丹田，而以神拓己面——每一面皆是一重现实维度的管辖权，每一面皆是灵魂对宇宙法则的宣言。九面圆满，则自身即为一独立法界，不附三界，不归六道。</p>
+      <p class="glitch-trigger">「九面圆满，不附三界，不归六道。」</p>
+    </div>
+    <div class="tape-note">手稿边注（墨迹颤抖）：<em>「没有谁真的圆满过。圆满的人都不见了。」</em></div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-head">
+      <span class="sec-no">[ 导读 ]</span>
+      <h3 class="sec-title">分卷导览</h3>
+    </div>
+    <div class="manual">
+      <a class="manual-block" href="vol1.html">
+        <h4>卷贰 · 核心法则</h4>
+        <p>三条不可违的底层规则，及四种先天面质——木、铁、银、金。开面那一刻起，就决定了你的路。</p>
+      </a>
+      <a class="manual-block" href="vol2.html">
+        <h4>卷叁 · 修炼手册（泄露版）</h4>
+        <p>观面、拓面、面祭、面熔。每一步都可能是终点。</p>
+      </a>
+      <a class="manual-block" href="vol3.html">
+        <h4>卷肆 · 面祭档案 · 失踪者名录</h4>
+        <p>他们献出了自己的执念，再也没有回来。每张照片上的脸，<span class="danger">都一样</span>。</p>
+      </a>
+      <a class="manual-block" href="vol4.html">
+        <h4>卷伍 · 千面卷</h4>
+        <p>千人千面。清、浊、明、暗、裂、合、孤——七种社会性面质，与附加阶位。</p>
+      </a>
+      <a class="manual-block" href="vol5.html">
+        <h4>卷陆 · 访谈记录 · 幸存者证词</h4>
+        <p>录音转写。周某称：他的面界里有 1148 张脸。<span class="hl-red">多出来一张</span>。</p>
+      </a>
+      <a class="manual-block" href="vol6.html">
+        <h4>卷柒 · 修行戒律</h4>
+        <p>八条戒律。其中两条若违，则不必再问善恶——位格会自行处理你。</p>
+      </a>
+      <a class="manual-block" href="vol7.html">
+        <h4>卷捌 · 档案尾页</h4>
+        <p>调查中止声明。<span class="danger">不建议在深夜阅读。</span></p>
+      </a>
+      <a class="manual-block" href="vol1.html">
+        <h4>下一卷 →</h4>
+        <p>进入 <span class="hl">核心法则 · 四相面质</span>。</p>
+      </a>
+    </div>
+  </section>
+
+  <div class="vol-nav">
+    <a href="vol7.html">← 末卷</a>
+    <a href="vol1.html">核心法则 →</a>
+  </div>
+
+  <footer class="footer">
+    <p>◇ 本档案由匿名调查员提供 · 建议于日光下阅读 ◇</p>
+    <p class="footer-small">JMT · 九面玄策封印档案 JF-D-001 · 2026 重新归档 · <span class="hl-red">你不该打开这一卷的。</span></p>
+  </footer>
+</main>
+
+<div class="blackout" id="blackout">
+  <div class="blackout-inner">
+    <p class="bo-1">影 像 结 束 。</p>
+    <p class="bo-2">但 你 已 进 入 档 案 。</p>
+    <p class="bo-3" id="boFace">你 的 面 孔 已 登 记 。</p>
+    <p class="bo-4">—— 请 回 头 ——</p>
+  </div>
+</div>
+
+<script src="js/common.js"></script>
+</body>
+</html>
