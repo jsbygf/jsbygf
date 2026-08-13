@@ -1,0 +1,147 @@
+/* 九面玄策 · 各卷内页样式（精简） */
+.cover { padding: 120px 20px 90px; text-align: center; border-bottom: 1px dashed var(--line); }
+.cover-mark { color: var(--blood); letter-spacing: 6px; font-size: 13px; margin-bottom: 30px; }
+.cover-title { font-size: clamp(36px, 8vw, 72px); letter-spacing: .24em; color: #e8e4d8;
+  text-shadow: 0 0 20px rgba(163,18,18,.4); margin-bottom: 8px; }
+.cover-en { color: var(--dim); font-size: 11px; letter-spacing: 6px; margin-bottom: 34px; }
+.cover-sub { color: var(--ink); font-size: 13px; line-height: 2.1; letter-spacing: 1px; }
+.cover-warn { margin: 44px auto 0; max-width: 520px; color: var(--dim); font-size: 12px;
+  line-height: 2; border: 1px dashed var(--blood); padding: 16px 20px; position: relative; }
+.cover-warn::before { content: "◢"; position: absolute; top: -9px; left: 8px;
+  color: var(--blood); background: var(--bg); padding: 0 6px; }
+
+/* 总纲 / 引言 */
+.cover.eye-cover {
+  background: radial-gradient(ellipse at center, rgba(163,18,18,.08), transparent 70%), #000;
+}
+
+/* 法则 */
+.laws { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px; margin-bottom: 44px; }
+.law { border: 1px solid var(--line); padding: 22px; background: rgba(12,11,9,.6);
+  transition: all .25s; }
+.law:hover { border-color: var(--blood); box-shadow: 0 0 22px rgba(163,18,18,.2);
+  transform: translateY(-2px); }
+.law-no { color: var(--blood); font-size: 11px; letter-spacing: 2px; }
+.law h4 { color: #e2ded2; font-size: 16px; letter-spacing: 2px; margin: 8px 0 10px; }
+.law p { color: var(--dim); font-size: 12.5px; line-height: 1.9; }
+
+.faces-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.face-card { border: 1px solid var(--line); text-align: center; padding: 26px 14px;
+  background: linear-gradient(180deg, rgba(20,18,14,.8), rgba(8,8,8,.9));
+  transition: all .3s; position: relative; overflow: hidden; }
+.face-card::after { content: attr(data-face); position: absolute; right: -8px; bottom: -14px;
+  font-size: 64px; color: rgba(255,255,255,.04); font-family: serif; }
+.face-card:hover { border-color: var(--blood); transform: scale(1.03); }
+.face-glyph { width: 64px; height: 64px; line-height: 64px; margin: 0 auto 14px;
+  font-size: 34px; color: var(--ink); border: 1px solid var(--line); border-radius: 50%;
+  transition: all .3s; background: radial-gradient(circle at 50% 30%, rgba(255,255,255,.06), transparent 70%); }
+.face-card:hover .face-glyph { color: #fff; border-color: var(--blood);
+  box-shadow: 0 0 26px rgba(163,18,18,.6); animation: glyph-spin 3s linear infinite; }
+@keyframes glyph-spin { to{transform:rotate(360deg)} }
+.face-card h4 { color: #e2ded2; font-size: 17px; letter-spacing: 3px; margin-bottom: 8px; }
+.face-card p { color: var(--dim); font-size: 12px; line-height: 1.8; }
+
+/* 修炼手册 */
+.manual { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.manual-block { border: 1px solid var(--line); padding: 26px; background: rgba(12,11,9,.6); }
+.manual-block h4 { color: #e2ded2; font-size: 15px; letter-spacing: 2px;
+  margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px dashed var(--line); }
+.manual-block p { color: var(--dim); font-size: 13px; line-height: 2; margin-bottom: 12px; }
+
+/* 失踪者档案（含眼睛照片） */
+.missing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.missing-card { border: 1px solid var(--line); background: rgba(10,9,8,.7); overflow: hidden;
+  transition: all .3s; }
+.missing-card:hover { border-color: var(--blood); box-shadow: 0 0 24px rgba(163,18,18,.25); }
+.m-photo { height: 160px; background: #0a0a0a; position: relative;
+  display: flex; align-items: center; justify-content: center; overflow: hidden;
+  background-image: repeating-linear-gradient(0deg, rgba(255,255,255,.03) 0 2px, transparent 2px 5px); }
+.m-photo::before { content: ""; position: absolute; inset: 0;
+  background: radial-gradient(circle at 50% 40%, rgba(255,255,255,.06), transparent 60%); }
+.m-photo .eye-img { max-width: 92%; max-height: 92%; width: auto; height: auto;
+  filter: contrast(1.4) brightness(.6) saturate(.2);
+  mix-blend-mode: screen; animation: eye-blink 5s infinite; }
+.missing-card:hover .eye-img { filter: contrast(1.6) brightness(.8) saturate(.3); }
+@keyframes eye-blink {
+  0%,92%,100%{transform:scaleY(1)}
+  94%{transform:scaleY(.05)}
+  96%{transform:scaleY(1)}
+  98%{transform:scaleY(.05)}
+}
+.missing-card h4 { padding: 14px 16px 4px; color: #e2ded2; font-size: 15px; letter-spacing: 2px; }
+.m-tag { color: var(--acid); font-size: 11px; letter-spacing: 1px; }
+.missing-card p { padding: 6px 16px 10px; color: var(--dim); font-size: 12px; line-height: 1.9; }
+.missing-card p.m-detail { color: #9a9486; border-top: 1px dashed var(--line); padding-top: 10px; }
+.missing-card p.m-detail em { color: var(--blood-bright); font-style: normal; }
+
+/* 千面卷 · 七面 */
+.seven-faces { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px; margin-top: 30px; }
+.s-face { border: 1px solid var(--line); text-align: center; padding: 20px 12px;
+  background: rgba(12,11,9,.6); transition: all .3s; }
+.s-face:hover { border-color: var(--acid); transform: translateY(-4px);
+  box-shadow: 0 0 20px rgba(184,255,46,.12); }
+.s-glyph { font-size: 30px; color: var(--ink); display: block; margin-bottom: 8px;
+  font-family: "SimSun", serif; }
+.s-face h4 { color: #e2ded2; font-size: 15px; letter-spacing: 3px; margin-bottom: 8px; }
+.s-face p { color: var(--dim); font-size: 11px; line-height: 1.8; min-height: 40px; }
+.s-risk { display: block; margin-top: 10px; font-size: 10px;
+  color: var(--blood); letter-spacing: 1px; }
+
+/* 访谈 */
+.interview { border: 1px solid var(--line); background: var(--paper);
+  padding: 30px 34px; line-height: 2; font-size: 13.5px; }
+.i-meta { color: var(--dim); font-size: 12px; letter-spacing: 1px;
+  margin-bottom: 22px; padding-bottom: 12px; border-bottom: 1px dashed var(--line); }
+.i-line { margin-bottom: 16px; }
+.q { color: var(--acid); }
+.a { color: var(--ink); }
+.i-line.corrupt { color: var(--blood); font-size: 12px; border: 1px dashed var(--blood);
+  padding: 10px 12px; margin: 20px 0; }
+
+/* 戒律 */
+.commandments { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+.commandments.sub { margin-top: 30px; }
+.commandments.sub h4 { grid-column: 1/-1; color: var(--blood); font-size: 14px; letter-spacing: 3px; }
+.cmd { display: flex; gap: 14px; align-items: flex-start; border: 1px solid var(--line);
+  padding: 16px 18px; background: rgba(10,9,8,.6); transition: all .25s; }
+.cmd:hover { border-color: var(--blood); }
+.cmd-no { flex-shrink: 0; width: 30px; height: 30px; line-height: 30px; text-align: center;
+  border: 1px solid var(--blood); color: var(--blood-bright); font-size: 13px; }
+.cmd p { color: var(--dim); font-size: 13px; line-height: 1.9; }
+.cmd b { color: #e2ded2; }
+
+/* 眼睛照片 · 中央闪现 */
+.eye-flash { position: fixed; z-index: 78; pointer-events: none; opacity: 0;
+  width: 200px; height: 200px;
+  filter: contrast(1.6) brightness(.85) drop-shadow(0 0 18px rgba(255,43,43,.45)); }
+.eye-flash.show { opacity: .95; animation: eye-flash-in .6s ease forwards; }
+@keyframes eye-flash-in {
+  0%{opacity:0; transform:scale(.6) rotate(-3deg)}
+  20%{opacity:.95; transform:scale(1.05) rotate(0deg)}
+  70%{opacity:.9}
+  100%{opacity:0; transform:scale(1.1) rotate(2deg)}
+}
+
+/* 眼睛照片 · 跟随鼠标 */
+.eye-follow { position: fixed; z-index: 65; pointer-events: none;
+  width: 70px; height: 70px; opacity: 0;
+  filter: contrast(1.5) brightness(.7); transition: opacity .6s; }
+.eye-follow.active { opacity: .5; }
+
+/* 眼睛照片 · 滚动进入视口 */
+.eye-peek { position: fixed; z-index: 64; pointer-events: none; opacity: 0;
+  width: 110px; height: 110px; transition: opacity .8s, transform .8s;
+  filter: contrast(1.5) brightness(.8); }
+.eye-peek.left { left: -20px; }
+.eye-peek.right { right: -20px; }
+.eye-peek.top { top: 80px; }
+.eye-peek.bottom { bottom: 30px; }
+.eye-peek.show { opacity: .55; }
+
+@media (max-width:800px){
+  .faces-grid { grid-template-columns: repeat(2, 1fr); }
+  .manual { grid-template-columns: 1fr; }
+  .commandments { grid-template-columns: 1fr; }
+}
